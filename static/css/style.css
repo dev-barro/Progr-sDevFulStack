@@ -1,0 +1,83 @@
+
+header {
+  background-color: #66972ef8;
+  padding: 10px, 30px;
+  width: 100%;
+  height: 50px;
+}
+.div-image-descrip{
+    padding: 0.5%;
+} 
+
+
+/* Style du menu */
+.ul-content {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+
+}
+
+.ul-content>li,a{
+  position: relative;/* Nécessaire pour le sous-menu */
+  margin-right: 20px;
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+  font-weight: bold; 
+}
+
+.submenu>li>a {
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  display: block;
+}
+
+/* Sous-menu */
+.submenu {
+  display: none;/* Par défaut, le sous-menu est caché */
+  position: absolute;
+  top: 100%;/* Place le sous-menu en dessous du lien parent */
+  left: 0;
+  background-color: #0066cc;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  border-radius: 4px;
+}
+
+.submenu li {
+  padding: 10px 20px;
+}
+
+.submenu li a {
+  color: white;
+  font-size: 16px;
+}
+
+/* Affiche le sous-menu au survol */
+.ul-content>li:hover .submenu {
+  display: block;
+}
+
+/* Effet au survol */
+.ul-content>li>a:hover,
+.submenu li a:hover {
+  background-color: black;
+
+}
+
+.background-img {
+  position: absolute;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /*L'image est redimensionnée pour couvrir sans distorsion */
+  z-index: -1;
+  /*Place l'image derrière le contenu */
+
+}
